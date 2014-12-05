@@ -59,36 +59,6 @@ def infer(request):
 
     return HttpResponse(results, content_type="application/json")
 
-    #
-    # training_sets = []
-    # labels = []
-    # idx = 1
-    # for situation_spec in spec:
-    #     for cq_training in situation_spec["training"]:
-    #         print("Query: %s" % cq_training)
-    #         # Temp
-    #         contexts_res = db.contexts.find(json.loads(cq_training)).limit(50).sort('time', pymongo.ASCENDING)
-    #         contexts_sequential_array = convert_to_sequential_array(contexts_res)
-    #         training_sets.append(contexts_sequential_array)
-    #         labels.append(idx)
-    #
-    #     idx += 1
-    #
-    # knowledge_model = GaussianNB()
-    # print(numpy.array(training_sets))
-    # print(numpy.array(labels))
-    # knowledge_model.fit(numpy.array(training_sets), numpy.array(labels))
-    # print(knowledge_model.predict_log_proba(numpy.array(training_sets[0])))
-    # print(knowledge_model.predict_log_proba(numpy.array(training_sets[1])))
-    # print(knowledge_model.predict_log_proba(numpy.array(training_sets[2])))
-    # print(knowledge_model.predict_log_proba(numpy.array(training_sets[3])))
-    # observation_contexts = db.contexts.find(application["observation"]).limit(50).sort('time', pymongo.ASCENDING)
-    # contexts_sequential_array = convert_to_sequential_array(observation_contexts)
-    # print(contexts_sequential_array)
-    # prob_results = knowledge_model.predict_log_proba(numpy.array(contexts_sequential_array))
-    # print(prob_results)
-
-    # return HttpResponse(json.loads(prob_results), content_type="application/json")
 
 def convert_to_sequential_array(contexts_res):
     contexts_sequential_array = []
