@@ -1,0 +1,41 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>INFaaS Console</title>
+
+    <script src="{% static "lib/jquery-1.11.1.min.js" %}"></script>
+    <script src="{% static "lib/jquery-ui-1.11.2/jquery-ui.min.js" %}"></script>
+    <script>$(function () {});</script>
+    <script src="{% static "lib/Chart.js/Chart.min.js" %}"></script>
+
+    <link rel="stylesheet" href="{% static "lib/jquery-ui-1.11.2/jquery-ui.min.css" %}"/>
+    <link rel="stylesheet" href="{% static "lib/jqplot/jquery.jqplot.min.css" %}"/>
+    <link rel="stylesheet" href="{% static "css/layout.css" %}"/>
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+
+    {% block stylesheets %}
+    {% endblock %}
+</head>
+<body>
+<div class="layout-header">
+    {% block header %}{% endblock %}
+</div>
+<div class="layout-outer center">
+    <div class="layout-menu left">
+        {% block menu %}{% endblock %}
+    </div>
+    <div class="layout-main right">
+        {% block main %}{% endblock %}
+    </div>
+    <div class="layout-footer">
+        {% block footer %}{% endblock %}
+    </div>
+</div>
+
+{% block scripts %}
+{% endblock %}
+</body>
+</html>

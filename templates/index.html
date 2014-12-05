@@ -1,0 +1,87 @@
+{% extends "base_default.html" %}
+
+{% block stylesheets %}
+    <style>
+        a.more {
+            font-size: 10pt;
+            margin: 0px 10px 0px 0px;
+        }
+    </style>
+{% endblock %}
+
+{% block main %}
+    <div class="layout-root center">
+        <div class="col1">
+            <h1>Dashboard</h1>
+        </div>
+
+        <div class="col2 left">
+            <div class="content-container">
+                <div class="content-header">
+                    <h1 class="left">Context</h1>
+                    <a class="right more">More...</a>
+                </div>
+                <div class="content-body shadow clear">
+                    # of contexts: {{ context.num }}
+                </div>
+            </div>
+            <div class="content-container">
+                <div class="content-header">
+                    <h1 class="left">Solution</h1>
+                    <a class="right more">More...</a>
+                </div>
+                <div class="content-body shadow clear">
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="content-header">
+                    <h1 class="left">User</h1>
+                    <a class="right more">More...</a>
+                </div>
+                <div class="content-body shadow clear">
+                </div>
+            </div>
+        </div>
+
+        <div class="col2 right">
+            <div class="content-container">
+                <div class="content-header">
+                    <h1 class="left">Source</h1>
+                    <a class="right more">More...</a>
+                </div>
+                <div class="content-body shadow clear">
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="content-header">
+                    <h1 class="left">Domain</h1>
+                    <a class="right more">More...</a>
+                </div>
+                <div class="content-body shadow clear">
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="content-header">
+                    <h1 class="left">Authority</h1>
+                    <a class="right more">More...</a>
+                </div>
+                <div class="content-body shadow clear">
+                </div>
+            </div>
+        </div>
+
+        <div class="col1 clear">
+            <div class="content-container">
+                <div class="content-header">
+                    <h1 class="left">Application</h1>
+                    <a class="right more">More...</a>
+                </div>
+                <div class="content-body shadow clear">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

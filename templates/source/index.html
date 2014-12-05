@@ -1,0 +1,41 @@
+{% extends "base_default.html" %}
+
+{% load static from staticfiles %}
+
+{% block main %}
+    <div class="layout-root center">
+        <div cass="col2 left">
+            <h1>Source Management</h1>
+
+            <table style="width: 100%;">
+                <thead>
+                    <th style="width: 10%;">ID</th><th>Description</th>
+                </thead>
+                <tbody>
+                {% for s in sources %}
+                    <tr>
+                        <td style="text-align: center;"><a class="source-item" item-id="{{ s.id }}">{{ s.id }}</a></td>
+                        <td><label style="padding: 0px 8px;">{{ s.desc }}</label></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <ul>
+            </ul>
+        </div>
+        <div cass="col2 right">
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %} {{ block.super }}
+    <script src="{% static "js/context.js" %}"></script>
+    <script type="text/javascript">
+        (function($) {
+            $("a.source-item").click(function() {
+                alert($(this).attr('item-id'));
+            });
+        })(jQuery);
+    </script>
+{% endblock %}

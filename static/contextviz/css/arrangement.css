@@ -1,0 +1,15 @@
+div.center {
+    margin: 0 auto;
+}
+
+div.left {
+    float: left;
+}
+
+div.right {
+    float: right;
+}
+
+div.clear {
+    clear: both;
+}

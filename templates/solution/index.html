@@ -1,0 +1,123 @@
+{% extends "base_default.html" %}
+
+{% load static from staticfiles %}
+
+{% block stylesheets %}
+    <style>
+        tr {
+            height: 29px;
+        }
+    </style>
+{% endblock %}
+
+{% block main %}
+    <div class="layout-main center">
+        <div class="horizontal">
+            <h1>Solution Management</h1>
+            <button style="margin: 10px;">Add</button>
+            <button style="margin: 10px 0px 10px 0px;">Edit</button>
+        </div>
+        <ul class="horizontal right" style="margin: 10px;">
+            <label style="font-size: 10pt; line-height: 24px;">View:</label>
+            <select name="" id="">
+                <option value="">5 Items</option>
+                <option value="">10 Items</option>
+                <option value="">20 Items</option>
+                <option value="">50 Items</option>
+            </select>
+        </ul>
+        <div class="root">
+            <table>
+                <thead>
+                <th>ID</th>
+                <th>Domain</th>
+                <th>Specification</th>
+                <th>Visibility</th>
+                </thead>
+                <tbody>
+
+                {% for s in solutions %}
+                <tr>
+                    <td><a class="solutionListSpec" spec="{{ s.spec }}">{{ s.id }}</a></td>
+                    <td><a class="solutionListDomain">{{ s.domain }}</a></td>
+                    <td><a class="solutionListSpec" spec="{{ s.spec }}">{{ s.spec|length }} {% if s.spec|length >= 2 %}Situations{% else %}Situation{% endif %}</a></td>
+                    <td>{{ s.visibility }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <ul class="horizontal" style="padding:5px; font-size: 10pt;">
+                <li><a href="">1</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="dialogDomainDescription" title="Domain Description" style="display: none;"></div>
+    <div id="dialogSolutionSpec" title="Solution Specification" style="display: none;">
+        <textarea id="textareaSolutionSpec" style="position: absolute; top:0px; bottom: 0px; left:0px; right: 0px;"></textarea>
+{#        <div class="dialogTemplateSituation" style="display:none">#}
+{#            <div style="clear:both"></div>#}
+{#            <label for="">Situation: </label><input placeholder="Situation"><br>#}
+{#            <label for="">Training</label>#}
+{#            <div style="margin-left: 10px;">#}
+{#                <label for="">Source:</label><input placeholder="Source"><br>#}
+{#                <label for="">Type:</label><input placeholder="Type"><br>#}
+{#                <label for="">Time:</label><input placeholder="Time">#}
+{#            </div>#}
+{#            <label for="">Config:</label><input placeholder="Config"><br>#}
+{#            <label for="">Algorithm:</label><input placeholder="Algorithm">#}
+{#        </div>#}
+    </div>
+
+{% endblock %}
+
+{% block scripts %} {{ block.super }}
+    <script>
+        (function ($) {
+            var $domainDescription = $("div#dialogDomainDescription");
+            var $dialogDomainDescription = $domainDescription.dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    OK: function() {$(this).dialog("close");}
+                }
+            });
+            var $solutionSpec = $("div#dialogSolutionSpec");
+            var $dialogSolutionSpec = $solutionSpec.dialog({
+                autoOpen: false,
+                modal: true,
+                width: 500,
+                height: 300,
+                buttons: {
+                    OK: function() {$(this).dialog("close");}
+                }
+            });
+
+            $("a.solutionListDomain").click(function(e) {
+                $domainDescription.html($(this).attr("description"));
+                $dialogDomainDescription.dialog("option", {
+                    position: {
+                        of: e,
+                        my: "left top",
+                        at: "right bottom"
+                    }
+                });
+                $dialogDomainDescription.dialog("open");
+            });
+            $("a.solutionListSpec").click(function(e) {
+                $("#textareaSolutionSpec").html($(this).attr("spec"));
+{#                $dialogSolutionSpec.children(".dialogTemplateSituation").each(function(){#}
+{#                    $(this).css("display", "block");#}
+{#                });#}
+                $dialogSolutionSpec.dialog("option", {
+                    position: {
+                        of: e,
+                        my: "left top",
+                        at: "right bottom"
+                    }
+                });
+                $dialogSolutionSpec.dialog("open");
+            });
+        })(jQuery);
+    </script>
+{% endblock %}

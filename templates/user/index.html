@@ -1,0 +1,19 @@
+{% extends "base_default.html" %}
+
+{% load static from staticfiles %}
+
+{% block stylesheets %}
+    <style>
+    </style>
+{% endblock %}
+
+{% block main %}
+    <div class="layout-main center">
+        <h1>User Management</h1>
+
+    </div>
+{% endblock %}
+
+{% block scripts %} {{ block.super }}
+    <script src="{% static "js/context.js" %}"></script>
+{% endblock %}
