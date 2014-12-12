@@ -3,7 +3,7 @@ import json
 from INFaaS import settings
 from dbman import DBManangerMongoDB
 
-__author__ = 'mkk'
+__author__ = 'Moon Kwon Kim <mkdmkk@gmail.com>'
 
 
 # Initialize db
@@ -17,7 +17,7 @@ conn = httplib.HTTPConnection(settings.SERVER_HOST, settings.SERVER_PORT)
 # Register domain
 domain = {}
 domain["id"] = "net.infidea.infaas.domain.iris"
-domain["name"] = "Human Activity Recognition"
+domain["name"] = "IRIS Example"
 domain["description"] = "IRIS Example"
 domain["situations"] = ["setosa", "versicolor", "virginica"]
 conn.request("POST", "/api/domain", json.dumps(domain), headers={"Content-Type": "application/json"})
@@ -186,10 +186,11 @@ baseset["virginica"] = [
 solution = {}
 solution["id"] = "net.infidea.infaas.solution.iris"
 solution["domain"] = "net.infidea.infaas.domain.iris"
-solution["alg"] = "c4.5"
+solution["alg"] = "kmeans"
 solution["baseset"] = baseset
 solution["visibility"] = "public"
 solution["features"] = ["sepal length in cm", "sepal width in cm", "petal length in cm", "petal width in cm"]
+solution["conf"] = {"num_clusters":4}
 
 # Register solution
 conn.request("POST", "/api/solution", json.dumps(solution), headers={"Content-Type": "application/json"})

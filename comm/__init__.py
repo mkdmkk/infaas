@@ -1,7 +1,7 @@
 import httplib
 import simplejson
 
-__author__ = 'mkk'
+__author__ = 'Moon Kwon Kim <mkdmkk@gmail.com>'
 
 class Communicator(object):
     def __init__(self, host, port, url):
