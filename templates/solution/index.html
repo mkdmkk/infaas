@@ -38,9 +38,9 @@
 
                 {% for s in solutions %}
                 <tr>
-                    <td><a class="solutionListSpec" spec="{{ s.spec }}">{{ s.id }}</a></td>
+                    <td><a class="solutionListSpec" spec="{{ s.baseset }}">{{ s.id }}</a></td>
                     <td><a class="solutionListDomain">{{ s.domain }}</a></td>
-                    <td><a class="solutionListSpec" spec="{{ s.spec }}">{{ s.spec|length }} {% if s.spec|length >= 2 %}Situations{% else %}Situation{% endif %}</a></td>
+                    <td><a class="solutionListSpec" spec="{{ s.baseset }}">{{ s.baseset|length }} {% if s.spec|length >= 2 %}Situations{% else %}Situation{% endif %}</a></td>
                     <td>{{ s.visibility }}</td>
                 </tr>
                 {% endfor %}

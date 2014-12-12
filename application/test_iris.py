@@ -186,7 +186,7 @@ baseset["virginica"] = [
 solution = {}
 solution["id"] = "net.infidea.infaas.solution.iris"
 solution["domain"] = "net.infidea.infaas.domain.iris"
-solution["alg"] = "kmeans"
+solution["alg"] = "kmeans" # one of the algorithms: c4.5, gnb, svm, knn, kmeans
 solution["baseset"] = baseset
 solution["visibility"] = "public"
 solution["features"] = ["sepal length in cm", "sepal width in cm", "petal length in cm", "petal width in cm"]
@@ -200,9 +200,10 @@ response = conn.getresponse()
 application = {}
 application["user"] = "mkdmkk@gmail.com"
 application["solution"] = "net.infidea.infaas.solution.iris"
-application["observation"] = [5.4, 3.7, 1.5, 0.2] # virginica
+application["observation"] = [6.3, 3.3, 6., 2.5] # virginica
 
 # Request situation inference
 conn.request("POST", "/api/infer", json.dumps(application), headers={"Content-Type": "application/json"})
 response = conn.getresponse()
 print(response.read())
+

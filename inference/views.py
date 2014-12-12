@@ -64,8 +64,7 @@ def infer(request):
     sit_list = []
     sit_base_list = []
     for sit, sit_base in solution["baseset"].iteritems():
-        print(sit)
-        print(sit_base)
+        print("The situation loaded. %s: %s" % (sit, sit_base))
         sit_list += [sit] * len(sit_base)
         sit_base_list += sit_base
 
@@ -82,28 +81,8 @@ def infer(request):
     elif alg_type == "clustering":
         if "observation" in application:
             results = model.predict(numpy.array(application["observation"]))
-        print(model.labels_)
-        return HttpResponse(json.dumps({"baseset":model.labels_,"observation":results}), content_type="application/json")
+            print("Result of inference: %s" % results.tolist()[0])
+        print("Result of clustering: %s" % model.labels_.tolist())
+        return HttpResponse(json.dumps({"baseset":model.labels_.tolist(),"observation":results.tolist()[0]}), content_type="application/json")
     else:
         return HttpResponse("No result.", content_type="application/json")
-
-
-def convert_to_sequential_array(contexts_res):
-    contexts_sequential_array = []
-    # if contexts_res.count() > 0:
-    # first_time = contexts_res[0]["time"]
-
-    # dt_util = DateTimeUtil()
-    for context_res in contexts_res:
-        # dt_diff = dt_util.get_difference_as_seconds(first_time, context_res["time"]);
-        # contexts_sequential_array.append([
-        #     dt_diff,
-        #     context_res["data"]["x"],
-        #     context_res["data"]["y"],
-        #     context_res["data"]["z"]])
-        # contexts_sequential_array.append(dt_diff)
-        contexts_sequential_array.append(float(context_res["data"]["x"]))
-        contexts_sequential_array.append(float(context_res["data"]["y"]))
-        contexts_sequential_array.append(float(context_res["data"]["z"]))
-
-    return contexts_sequential_array
