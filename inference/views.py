@@ -10,7 +10,15 @@ from sklearn.neighbors.classification import KNeighborsClassifier
 from sklearn.svm.classes import SVC
 from sklearn.tree.tree import DecisionTreeClassifier
 
+from hmmlearn.hmm import GaussianHMM
+
+
 __author__ = 'Moon Kwon Kim <mkdmkk@gmail.com>'
+
+
+ALGS_CLASSIFICATION = ["c4.5", "gnb", "svm", "knn", "hmm"]
+ALGS_CLUSTERING = ["kmeans"]
+
 
 @csrf_exempt
 def infer(request):
@@ -33,16 +41,12 @@ def infer(request):
     # K-Nearest Neighbors (knn), K-Means Clustering (kmeans)
     if solution["alg"] == "c4.5":
         model = DecisionTreeClassifier()
-        alg_type = "classification"
     elif solution["alg"] == "gnb":
         model = GaussianNB()
-        alg_type = "classification"
     elif solution["alg"] == "svm":
         model = SVC()
-        alg_type = "classification"
     elif solution["alg"] == "knn":
         model = KNeighborsClassifier(1)
-        alg_type = "classification"
     elif solution["alg"] == "kmeans":
         # Check configuration
         if "conf" in application and "num_clusters" in application["conf"]:
@@ -53,32 +57,22 @@ def infer(request):
             num_clusters = len(domain["situations"])
         print("The decided number of clusters is %s." % num_clusters)
         model = KMeans(n_clusters=num_clusters)
-        alg_type = "clustering"
+    elif solution["alg"] == "hmm":
+        return HttpResponse(json.dumps(_run_hmm(application, domain, solution)), content_type="application/json")
     else:
         return HttpResponse("The specified algorithm, %s, is not supported yet." % solution["alg"], content_type="application/json")
 
     print("The model is prepared: %s" % model)
 
-    # Check solution
-    print("Checking solution...")
-    sit_list = []
-    sit_base_list = []
-    for sit, sit_base in solution["baseset"].iteritems():
-        print("The situation loaded. %s: %s" % (sit, sit_base))
-        sit_list += [sit] * len(sit_base)
-        sit_base_list += sit_base
-
     # Train model
-    X = numpy.array(sit_base_list)
-    y = numpy.array(sit_list)
-    model.fit(X, y)
+    _train_model(model, *_load_solution(solution))
 
     # Infer situation
-    if alg_type == "classification":
+    if solution["alg"] in ALGS_CLASSIFICATION:
         results = model.predict(numpy.array(application["observation"]))
         print("The situation is inferred: %s" % results)
         return HttpResponse(results, content_type="application/json")
-    elif alg_type == "clustering":
+    elif solution["alg"] in ALGS_CLUSTERING:
         if "observation" in application:
             results = model.predict(numpy.array(application["observation"]))
             print("Result of inference: %s" % results.tolist()[0])
@@ -86,3 +80,58 @@ def infer(request):
         return HttpResponse(json.dumps({"baseset":model.labels_.tolist(),"observation":results.tolist()[0]}), content_type="application/json")
     else:
         return HttpResponse("No result.", content_type="application/json")
+
+
+def _load_solution(solution):
+    print("Loading solution...")
+    if type(solution) is dict: # Supervised Learning
+        baseset_lbs = []
+        basesets = []
+        for lb, baseset in solution["baseset"].iteritems():
+            print("The situation loaded. %s: %s" % (lb, baseset))
+            baseset_lbs += [lb] * len(baseset)
+            basesets += baseset
+        return basesets, baseset_lbs
+    elif type(solution) is list: # Unsupervised Learning
+        pass
+
+
+def _train_model(model, basesets, baseset_lbs):
+    """
+    Train model
+    :param model:
+    :param basesets:
+    :param baseset_lbs: {optional} label for each base set
+    :return: trained model
+    """
+    print("Training model...")
+    X = numpy.array(basesets)
+    if baseset_lbs != None:
+        y = numpy.array(baseset_lbs)
+        model.fit(X, y) # Supervised Learning
+
+
+def _run_hmm(application, domain, solution):
+    """
+    Run hmm
+    :return:
+    """
+    # Prepare multiple HMMs
+    models = {}
+    for s in domain.situations:
+        models[s] = GaussianHMM()
+
+    # Train the HMMs by the solution
+    for s, seq in solution.baseset:
+        models[s].fit(seq)
+
+    # Classify the observations specified in the application
+    max_prob = None
+    result_sit = None
+    for s, model in models:
+        prob = model.predict(application.observation)
+        if not max_prob or max_prob <= prob:
+            max_prob = prob
+            result_sit = s
+
+    return result_sit

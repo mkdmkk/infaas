@@ -53,6 +53,7 @@ def process(request):
         return HttpResponse("Successful.", content_type="application/json")
 
     elif request.method == 'DELETE':
-        pass
+        solutions.remove(simplejson.loads(request.body))
+        return HttpResponse("Successful.", content_type="application/json")
 
     return HttpResponse()

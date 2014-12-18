@@ -50,6 +50,7 @@ def process(request):
         return HttpResponse()
 
     elif request.method == 'DELETE':
-        pass
+        domains.remove(simplejson.load(request.body))
+        return HttpResponse()
 
     return HttpResponse()
