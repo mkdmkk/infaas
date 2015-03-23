@@ -24,7 +24,7 @@ conn.request("POST", "/api/domain", json.dumps(domain), headers={"Content-Type":
 response = conn.getresponse()
 
 # Prepare iris training set
-baseset = {}
+baseset = []
 baseset["setosa"] = [
     [5.1, 3.5, 1.4, 0.2],
     [4.9, 3., 1.4, 0.2],
@@ -183,10 +183,10 @@ baseset["virginica"] = [
 ]
 
 # Prepare solution
-solution = {}
+solution = []
 solution["id"] = "net.infidea.infaas.solution.iris"
 solution["domain"] = "net.infidea.infaas.domain.iris"
-solution["alg"] = "svm" # one of the algorithms: c4.5, gnb, svm, knn, kmeans
+solution["alg"] = "adaboost" # one of the algorithms: c4.5, cart, gnb, svm, knn, kmeans
 solution["baseset"] = baseset
 solution["visibility"] = "public"
 solution["features"] = ["sepal length in cm", "sepal width in cm", "petal length in cm", "petal width in cm"]
@@ -197,7 +197,7 @@ conn.request("POST", "/api/solution", json.dumps(solution), headers={"Content-Ty
 response = conn.getresponse()
 
 # Prepare application to request
-application = {}
+application = []
 application["user"] = "mkdmkk@gmail.com"
 application["solution"] = "net.infidea.infaas.solution.iris"
 application["observation"] = [6.3, 3.3, 6., 2.5] # virginica
