@@ -34,6 +34,11 @@ ALGS_CLUSTERING = [
     "kmeans"    # K-Means Clustering
 ]
 
+# Default configuration for each algorithm
+DEFAULT_CONF = {
+    "kmeans": {"num_clusters": 4},
+    "hmm": {"num_states": 4}
+}
 
 @csrf_exempt
 def infer(request):
@@ -98,6 +103,9 @@ def _prepare_model(solution, domain):
     elif solution["alg"] == "adaboost":
         model = AdaBoostClassifier()
     elif solution["alg"] == "kmeans":
+        # Configuration for KMeans:
+        # num_clusters: the number of clusters
+
         # Check configuration
         if "conf" in solution and "num_clusters" in solution["conf"]:
             num_clusters = solution["conf"]["num_clusters"]
@@ -106,10 +114,18 @@ def _prepare_model(solution, domain):
         print("The decided number of clusters is %s." % num_clusters)
         model = KMeans(n_clusters=num_clusters)
     elif solution["alg"] == "hmm":
+        # Configuration for HMM:
+        # num_states: the number of hidden states
+
         model = {}
 
         for s in domain.situations:
-            model[s] = GaussianHMM()
+            model[s] = GaussianHMM(int(solution["conf"]["num_states"]) if "conf" in solution and "num_states" in solution["conf"] else DEFAULT_CONF["hmm"]["num_states"], algorithm='viterbi', covariance_type='diag')
+            X = np.reshape(data, (len(data),1))
+            self.model = self.model.fit([X])
+
+            self.hidden_states = self.model.predict(X)
+            print(self.hidden_states)
     return model
 
 
