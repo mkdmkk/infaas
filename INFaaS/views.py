@@ -1,8 +1,10 @@
 '''
 Author: Moon Kwon Kim <mkdmkk@gmail.com>
 '''
+from bson import json_util
 from django.shortcuts import render_to_response
 from django.template.context import Context
+from contextman.contextman import ContextManager
 
 import sourceman.views as sourceman
 
@@ -15,6 +17,7 @@ def render(request, page):
         template = "user/index.html"
     elif page == 'context':
         template = "context/index.html"
+        context['contexts'] = ContextManager().retrieve()
     elif page == 'solution':
         template = "solution/index.html"
     elif page == 'source':

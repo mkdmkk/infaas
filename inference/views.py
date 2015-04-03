@@ -37,7 +37,7 @@ ALGS_CLUSTERING = [
 # Default configuration for each algorithm
 DEFAULT_CONF = {
     "kmeans": {"num_clusters": 4},
-    "hmm": {"num_states": 4}
+    "hmm": {"num_states": 4, "algo":"viterbi"}
 }
 
 @csrf_exempt
@@ -118,14 +118,9 @@ def _prepare_model(solution, domain):
         # num_states: the number of hidden states
 
         model = {}
-
         for s in domain.situations:
             model[s] = GaussianHMM(int(solution["conf"]["num_states"]) if "conf" in solution and "num_states" in solution["conf"] else DEFAULT_CONF["hmm"]["num_states"], algorithm='viterbi', covariance_type='diag')
-            X = np.reshape(data, (len(data),1))
-            self.model = self.model.fit([X])
 
-            self.hidden_states = self.model.predict(X)
-            print(self.hidden_states)
     return model
 
 
@@ -161,6 +156,14 @@ def _train_model(model, basesets, baseset_lbs):
     if baseset_lbs:
         y = numpy.array(baseset_lbs)
         model.fit(X, y) # Supervised Learning
+
+
+
+    # X = np.reshape(data, (len(data),1))
+    # self.model = self.model.fit([X])
+    #
+    # self.hidden_states = self.model.predict(X)
+    # print(self.hidden_states)
 
     #
     # # Train the HMMs by the solution

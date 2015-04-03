@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Unit services
+    # Services
     'inference',
     'contextman',
     'solutionman',
@@ -105,4 +105,4 @@ SERVER_PORT = 8000
 CONTEXTVIZ_WEBSOCKET_PORT = 8001
 
 # DB Info
-DB_NAME = "sis"
+DB_NAME = "infaas"

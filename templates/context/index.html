@@ -1,6 +1,7 @@
 {% extends "base_default.html" %}
 
 {% load static from staticfiles %}
+{% load common %}
 
 {% block stylesheets %}
     <style>
@@ -19,21 +20,33 @@
 {% block main %}
     <div class="layout-main center">
         <h1>Context Management</h1>
-        <div class="horizontal">
-            <h2>Context Query</h2>
-            <button id="bt-query" style="margin: 15px 0px 0px 20px;">Query</button>
-        </div>
-        <div class="clear"/>
         <table class="noborder">
             <tr>
                 <td>Source:</td><td><input id="in-source" placeholder="Source" value="2"></td>
                 <td>Type:</td><td><input id="in-type" placeholder="Type" value="Acceleration"></td>
+                <td rowspan="2"><button id="bt-query" style="margin: 0px 0px 0px 20px; padding: 12px 10px;">Query</button></td>
             </tr>
             <tr>
                 <td>Time:</td><td><input id="in-from" placeholder="From" value="2014-06-29T20:23:37">-<input id="in-to" placeholder="To" value="2014-06-29T20:24:26"></td>
                 <td>Limit:</td><td><input id="in-maxctxnum" placeholder="Ex.) 50" value="50"></td>
+                <td></td>
             </tr>
         </table>
+        <div>
+            <h2>Context List</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Source</th><th>Type</th><th>Data</th><th>Time</th>
+                    </tr>
+                    {% for c in contexts %}
+                    <tr>
+                        <td>{{ c.source }}</td><td>{{ c.type }}</td><td>{{ c.data|tostring }}</td><td>{{ c.time }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
 
         <h2>Context Visualization</h2>
         <div class="root" style="height: 250px">
@@ -44,5 +57,8 @@
 {% endblock %}
 
 {% block scripts %} {{ block.super }}
+    <script type="text/javascript">
+        var jsonContexts = JSON.parse('{{ contexts|tostring }}'.replace(/&quot;/g,'"'));
+    </script>
     <script src="{% static "js/context.js" %}"></script>
 {% endblock %}

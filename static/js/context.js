@@ -35,7 +35,8 @@
 
     $("#bt-query").click(function() {
         $.get("http://localhost:8000/api/context", packContextQuery(), function(res) {
-            contextVisualizer.plot(data);
+            //contextVisualizer.plot(data);
+            alert(res);
         });
     });
 
