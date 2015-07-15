@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # Services
+    'acquisition',
     'inference',
     'contextman',
     'solutionman',
@@ -98,11 +99,14 @@ TEMPLATE_DIRS = (
 )
 
 # Server Info
-SERVER_HOST = "localhost"
+SERVER_HOST = "203.253.23.17"
 SERVER_PORT = 8000
 
 # Application Info
 CONTEXTVIZ_WEBSOCKET_PORT = 8001
 
 # DB Info
+DB_HOST = ""
 DB_NAME = "infaas"
+
+TIME_FORMAT = "%Y-%m-%dT%H:%M:%S"

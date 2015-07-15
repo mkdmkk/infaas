@@ -22,7 +22,13 @@ class DBManangerMongoDB():
         self.db.create_collection("sources")
 
         self.db.users.create_index("email", unique=True)
-        self.db.domains.create_index("id", unique=True)
-        self.db.solutions.create_index("id", unique=True)
-        self.db.contexts.create_index("id", unique=True)
-        self.db.sources.create_index("id", unique=True)
+        # self.db.domains.create_index("id", unique=True)
+        # self.db.solutions.create_index("id", unique=True)
+        # self.db.contexts.create_index("id", unique=True)
+        # self.db.sources.create_index("id", unique=True)
+
+
+if __name__ == "__main__":
+    dbman = DBManangerMongoDB()
+    dbman.drop_collections()
+    dbman.init_collections()

@@ -14,6 +14,30 @@
         div.context-query-container .input-left {
             width: 300px;
         }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+
+        .grid path,
+        .grid line {
+          fill: none;
+          stroke: rgba(0, 0, 0, 0.25);
+          shape-rendering: crispEdges;
+        }
+
+        .x.axis path {
+          display: none;
+        }
+
+        .line {
+          fill: none;
+          stroke-width: 2.5px;
+        }
+
     </style>
 {% endblock %}
 
@@ -57,11 +81,42 @@
         </div>
         <div id="raw-data" style="float: right; width: 200px"/>
     </div>
+    <iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="900"
+  height="700">
+</iframe>
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/selab_ssu'
+     + '&showsearch=true&showpopout=true&showtabs=false'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+
 {% endblock %}
 
 {% block scripts %} {{ block.super }}
     <script type="text/javascript">
+{#        var contextVisualizer = new ContextVisualizer($("#chart-curr-context"));#}
+
         var jsonContexts = JSON.parse('{{ contexts|tostring }}'.replace(/&quot;/g,'"'));
+
+        $("#bt-query").click(function() {
+            $.get("http://localhost:8000/api/context", packContextQuery(), function(res) {
+                //contextVisualizer.plot(data);
+                alert(res);
+            });
+        });
+
+        function packContextQuery() {
+            var contextQuery = {};
+    //        contextQuery["source"] = $("#in-source").val();
+    //        contextQuery["type"] = $("#in-type").val();
+            contextQuery["time"] = {"$gte":$("#in-from").val(),"$lte":$("#in-to").val()}
+            return {"query":JSON.stringify(contextQuery),"limit":$("#in-maxctxnum").val()};
+        }
     </script>
     <script src="{% static "js/context.js" %}"></script>
 {% endblock %}

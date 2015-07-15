@@ -48,7 +48,7 @@
         // CSS color spec for the dragged point (and adjacent line segment or bar).
         this.color;
         // prop: constrainTo
-        // Constrain dragging motion to an axis or to none.
+        // Constrain dragging activity to an axis or to none.
         // Allowable values are 'none', 'x', 'y'
         this.constrainTo = 'none';  // 'x', 'y', or 'none';
         $.extend(true, this, options);

@@ -1,4 +1,4 @@
-from application import app1
+from application.activity import app1
 from dbman import DBManangerMongoDB
 import domainman
 import solutionman

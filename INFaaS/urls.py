@@ -27,8 +27,11 @@ urlpatterns = patterns('',
     url(r'^api/domain$', 'domainman.views.process'),
     url(r'^api/user$', 'domainman.views.process'),
     url(r'^api/infer$', 'inference.views.infer'),
+    url(r'^api/hello', 'test.views.hello'),
 
     # Admin Console
     url(r'^admin/', include(admin.site.urls)),
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
+    # Context Acquisition
+    url(r'^cb/acquisition/withings', 'acquisition.withings.on_authorized'),
+) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

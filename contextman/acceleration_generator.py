@@ -1,7 +1,7 @@
-import httplib
+from http.client import HTTPConnection
+import json
 import random
 import datetime
-import simplejson
 import time
 from INFaaS import settings
 
@@ -10,14 +10,14 @@ __author__ = 'mkk'
 class ContextTransmitter(object):
     def __init__(self, host, port, url):
         self.url = url
-        self.conn = httplib.HTTPConnection(host, port)
+        self.conn = HTTPConnection(host, port)
 
     def generate(self):
         pass
 
     def post(self, context):
         print(context)
-        self.conn.request("POST", self.url, simplejson.dumps(context), headers={"Content-Type": "application/json"})
+        self.conn.request("POST", self.url, json.dumps(context), headers={"Content-Type": "application/json"})
         response = self.conn.getresponse()
         print(response.status)
 

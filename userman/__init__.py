@@ -1,4 +1,5 @@
-import httplib
+import json
+import httplib2
 from INFaaS import settings
 
 __author__ = 'mkk'
@@ -6,7 +7,7 @@ __author__ = 'mkk'
 
 def post_user1():
     # Prepare connection to INFaaS
-    conn = httplib.HTTPConnection(settings.SERVER_HOST, settings.SERVER_PORT)
+    conn = httplib2.HTTPConnection(settings.SERVER_HOST, settings.SERVER_PORT)
 
     # Prepare user
     user = {

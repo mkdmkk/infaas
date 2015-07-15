@@ -3,16 +3,17 @@ Context Management Service
 
 Author: Moon Kwon Kim <mkdmkk@gmail.com>
 '''
+import json
 from bson import json_util
 from django.views.decorators.csrf import csrf_exempt
 from django.http.response import HttpResponse
-import simplejson
 
 from contextman import ContextManager
 
 
 @csrf_exempt
 def process(request):
+
     cm = ContextManager()
 
     if request.method == 'GET':
@@ -20,7 +21,7 @@ def process(request):
 
         # Validation is needed.
 
-        res_contexts = cm.retrieve(query=simplejson.loads(request.GET["query"]), limit=int(request.GET["limit"]))
+        res_contexts = cm.retrieve(query=json.loads(request.GET["query"]), limit=int(request.GET["limit"]))
         return HttpResponse(json_util.dumps(res_contexts).encode("utf-8"), content_type="application/json")
 
     elif request.method == 'POST':
@@ -28,7 +29,7 @@ def process(request):
 
         # Validation is needed.
 
-        cm.insert(simplejson.loads(request.body))
+        cm.insert(json.loads(request.body))
         return HttpResponse()
 
     elif request.method == 'DELETE':
@@ -36,7 +37,7 @@ def process(request):
 
         # Validation is needed.
 
-        cm.remove(simplejson.loads(request.body))
+        cm.remove(json.loads(request.body))
         return HttpResponse()
 
     return HttpResponse()

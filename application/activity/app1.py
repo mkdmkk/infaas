@@ -1,4 +1,4 @@
-import httplib
+import httplib2
 import json
 from INFaaS import settings
 
@@ -7,7 +7,7 @@ App for Human Activity Recognition
 """
 def request():
     # Prepare connection to INFaaS
-    conn = httplib.HTTPConnection(settings.SERVER_HOST, settings.SERVER_PORT)
+    conn = httplib2.HTTPConnection(settings.SERVER_HOST, settings.SERVER_PORT)
 
     # Prepare contexts for testing
     context_query = {}

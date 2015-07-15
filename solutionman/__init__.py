@@ -1,4 +1,4 @@
-import simplejson
+import json
 from comm import Communicator
 from INFaaS import settings
 
@@ -26,9 +26,9 @@ def post_solution1():
     cq_running["time"]["$lte"] = "2014-06-29T20:14:18"
 
     spec = {}
-    spec["walking"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_walking)], "config": {}}
-    spec["jogging"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_jogging)], "config": {}}
-    spec["running"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_running)], "config": {}}
+    spec["walking"] = {"algo": "c4.5", "training": [json.dumps(cq_walking)], "config": {}}
+    spec["jogging"] = {"algo": "c4.5", "training": [json.dumps(cq_jogging)], "config": {}}
+    spec["running"] = {"algo": "c4.5", "training": [json.dumps(cq_running)], "config": {}}
 
     solution = {}
     solution["id"] = 1
@@ -70,10 +70,10 @@ def post_solution2():
     cq_sitting["time"]["$lte"] = "3043662242000"
 
     spec = {}
-    spec["walking"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_walking)], "config": {}}
-    spec["jogging"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_jogging)], "config": {}}
-    spec["standing"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_standing)], "config": {}}
-    spec["sitting"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_sitting)], "config": {}}
+    spec["walking"] = {"algo": "c4.5", "training": [json.dumps(cq_walking)], "config": {}}
+    spec["jogging"] = {"algo": "c4.5", "training": [json.dumps(cq_jogging)], "config": {}}
+    spec["standing"] = {"algo": "c4.5", "training": [json.dumps(cq_standing)], "config": {}}
+    spec["sitting"] = {"algo": "c4.5", "training": [json.dumps(cq_sitting)], "config": {}}
 
     solution = {}
     solution["id"] = 2
@@ -115,10 +115,10 @@ def post_solution3():
     cq_sitting["time"]["$lte"] = "3043662242000"
 
     spec = {}
-    spec["walking"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_walking)], "config": {}}
-    spec["jogging"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_jogging)], "config": {}}
-    spec["standing"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_standing)], "config": {}}
-    spec["sitting"] = {"algo": "c4.5", "training": [simplejson.dumps(cq_sitting)], "config": {}}
+    spec["walking"] = {"algo": "c4.5", "training": [json.dumps(cq_walking)], "config": {}}
+    spec["jogging"] = {"algo": "c4.5", "training": [json.dumps(cq_jogging)], "config": {}}
+    spec["standing"] = {"algo": "c4.5", "training": [json.dumps(cq_standing)], "config": {}}
+    spec["sitting"] = {"algo": "c4.5", "training": [json.dumps(cq_sitting)], "config": {}}
 
     solution = {}
     solution["id"] = 3

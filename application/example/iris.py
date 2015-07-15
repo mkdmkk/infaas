@@ -1,5 +1,6 @@
 import httplib
 import json
+import time
 from INFaaS import settings
 from dbman import DBManangerMongoDB
 
@@ -203,7 +204,11 @@ application["solution"] = "net.infidea.infaas.solution.iris"
 application["observation"] = [6.3, 3.3, 6., 2.5] # virginica
 
 # Request situation inference
+start = time.time()
 conn.request("POST", "/api/infer", json.dumps(application), headers={"Content-Type": "application/json"})
 response = conn.getresponse()
-print(response.read()) # virginica
+res = json.loads(response.read())
+end = time.time()
+
+print("Result: %s, Confidence: %s, Elapsed Time: %s" % (res["result"], res["confidence"], int(round((end-start)*1000)))) # virginica
 
