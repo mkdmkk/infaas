@@ -33,5 +33,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # Context Acquisition
-    url(r'^cb/acquisition/withings', 'acquisition.withings.on_authorized'),
+    url(r'^cb/acquisition/withings', '......smart_health_toilet.withings.on_authorized'),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
