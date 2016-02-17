@@ -7,15 +7,7 @@ __author__ = 'mkk'
 
 
 class ContextManager:
-    """
-    Contexts Manager
 
-    Context Format:
-     {time, type, value}
-     - time: Date as unix epoch
-     - type: INFaaS Context Types; see contextman.contexttypes
-     - value: float
-    """
     def __init__(self):
         self.client = MongoClient()
         self.db = self.client[settings.DB_NAME]
