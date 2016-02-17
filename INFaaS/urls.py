@@ -7,7 +7,7 @@ from INFaaS import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # INFaaS Console
+    # INFaaS Console (SaaS)
     url(r'^solution/?$', 'solutionman.views.render', {"page":"index"}),
     url(r'^solution/(P<page>\w+)$', 'solutionman.views.render'),
 
@@ -17,11 +17,11 @@ urlpatterns = patterns('',
     url(r'^/?$', 'INFaaS.views.render', {"page":"index"}),
     url(r'^(?P<page>\w+)$', 'INFaaS.views.render'),
 
-    # Context Visualizer
+    # Context Visualizer (SaaS)
     url(r'^app/contextviz/?$', 'contextviz.views.render', {"page":"index"}),
     url(r'^app/contextviz/(?P<page>\w+)$', 'contextviz.views.render'),
 
-    # Unit Services; Context Mgt., Solution Mgt., Domain Mgt., User Mgt., and Inference Engine
+    # INFaaS APIs (CaaS)
     url(r'^api/context$', 'contextman.views.process'),
     url(r'^api/solution$', 'solutionman.views.process'),
     url(r'^api/domain$', 'domainman.views.process'),
