@@ -2,11 +2,12 @@ import calendar
 import json
 import os
 import threading
-import urlparse
+import urllib.parse
 from django.http import HttpResponse
 import math
 from INFaaS import settings
-from contextman import contextman, contexttypes
+from contextman import contexttypes
+from contextman.contextman import ContextManager
 
 __author__ = 'mkk'
 
@@ -71,7 +72,7 @@ class WithingsAcquisition(threading.Thread):
         self.consumer = oauth.Consumer(self.consumer_key, self.consumer_secret)
         self.client = oauth.Client(self.consumer)
 
-        self.cm = contextman.ContextManager()
+        self.cm = ContextManager()
 
         self.acquisition_interval = acquisition_interval
         WithingsAcquisition.instance = self
@@ -113,7 +114,7 @@ class WithingsAcquisition(threading.Thread):
         print("[Request Token] Response: %s" % resp)
         if resp['status'] != '200':
             raise Exception("[Request Token] Invalid response %s." % resp['status'])
-        self.request_token = dict(urlparse.parse_qsl(content)) # return list of name/value pairs
+        self.request_token = dict(urllib.parse.parse_qsl(content)) # return list of name/value pairs
         if "oauth_token" in self.request_token and "oauth_token_secret" in self.request_token:
             print("[Request Token] Content:")
             print("\t- oauth_token\t= %s" % self.request_token['oauth_token'])
@@ -146,7 +147,7 @@ class WithingsAcquisition(threading.Thread):
         token.set_verifier(self.oauth_verifier)
         self.client = oauth.Client(self.consumer, token)
         resp, content = self.client.request(self.access_token_url, "POST")
-        self.access_token = dict(urlparse.parse_qsl(content))
+        self.access_token = dict(urllib.parse.parse_qsl(content))
         print("[Access Token] Content: %s" % self.access_token)
         # print("\t- oauth_token\t= %s" % self.access_token['oauth_token'])
         # print("\t- oauth_token_secret\t= %s" % self.access_token['oauth_token_secret'])

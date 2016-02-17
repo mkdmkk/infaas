@@ -2,13 +2,13 @@ import httplib
 import json
 import time
 from INFaaS import settings
-from dbman import DBManangerMongoDB
+from database import MongoDBManager
 
 __author__ = 'Moon Kwon Kim <mkdmkk@gmail.com>'
 
 
 # Initialize db
-dbman = DBManangerMongoDB()
+dbman = MongoDBManager()
 dbman.drop_collections()
 dbman.init_collections()
 

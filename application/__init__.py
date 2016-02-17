@@ -1,12 +1,12 @@
 from application.activity import app1
-from dbman import DBManangerMongoDB
+from database import MongoDBManager
 import domainman
 import solutionman
 import userman
 
 
 if __name__ == "__main__":
-    dbManager = DBManangerMongoDB()
+    dbManager = MongoDBManager()
     dbManager.drop_collections()
     dbManager.init_collections()
 

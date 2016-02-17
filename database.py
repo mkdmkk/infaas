@@ -3,7 +3,7 @@ from INFaaS import settings
 
 __author__ = 'mkk'
 
-class DBManangerMongoDB():
+class MongoDBManager():
     def __init__(self):
         self.db = MongoClient()[settings.DB_NAME]
 
@@ -29,6 +29,6 @@ class DBManangerMongoDB():
 
 
 if __name__ == "__main__":
-    dbman = DBManangerMongoDB()
+    dbman = MongoDBManager()
     dbman.drop_collections()
     dbman.init_collections()
