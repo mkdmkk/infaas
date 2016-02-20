@@ -1,87 +1,71 @@
-{% extends "base_default.html" %}
+{% extends "common.html" %}
 
-{% block stylesheets %}
-    <style>
-        a.more {
-            font-size: 10pt;
-            margin: 0px 10px 0px 0px;
-        }
-    </style>
+{% block stylesheets %} {{ block.super }}
+    <style></style>
 {% endblock %}
 
-{% block main %}
-    <div class="layout-root center">
-        <div class="col1">
-            <h1>Dashboard</h1>
+{% block content %}
+    <div class="row visible-lg" style="margin-top: 20px;">
+        <div class="col-md-9 jumbotron" style="padding-top: 10px; padding-bottom: 10px;">
+            <h2>Welcome to INFaaS.</h2>
+            <p>INFaaS is a service that relieves your burden of inferring situations from observations.
+                It provides representative inference algorithms through RESTful APIs.</p>
         </div>
-
-        <div class="col2 left">
-            <div class="content-container">
-                <div class="content-header">
-                    <h1 class="left">Context</h1>
-                    <a class="right more">More...</a>
+        <div class="col-md-3">
+            <form id="formLogin" class="form-signin" action="/login" method="post">{% csrf_token %}
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address"
+                       required=""
+                       autofocus="" style="margin-bottom: 5px;">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password"
+                       required="">
+                <div class="checkbox">
+                    <label>
+                        <input id="ckRemMe" type="checkbox" value="remember-me"> Remember me
+                    </label>
+                    <label class="pull-right">
+                        <a href="#">Find ID/Password</a>
+                    </label>
                 </div>
-                <div class="content-body shadow clear">
-                    # of contexts: {{ context.num }}
+                <div class="row">
+                    <div class="col-md-8">
+                        <button class="btn btn-default btn-block" type="submit">Sign in</button>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="pull-right"><a id='btSignup' href="#">Sign up</a></label>
+                    </div>
                 </div>
-            </div>
-            <div class="content-container">
-                <div class="content-header">
-                    <h1 class="left">Solution</h1>
-                    <a class="right more">More...</a>
-                </div>
-                <div class="content-body shadow clear">
-                </div>
-            </div>
-
-            <div class="content-container">
-                <div class="content-header">
-                    <h1 class="left">User</h1>
-                    <a class="right more">More...</a>
-                </div>
-                <div class="content-body shadow clear">
-                </div>
-            </div>
-        </div>
-
-        <div class="col2 right">
-            <div class="content-container">
-                <div class="content-header">
-                    <h1 class="left">Source</h1>
-                    <a class="right more">More...</a>
-                </div>
-                <div class="content-body shadow clear">
-                </div>
-            </div>
-
-            <div class="content-container">
-                <div class="content-header">
-                    <h1 class="left">Domain</h1>
-                    <a class="right more">More...</a>
-                </div>
-                <div class="content-body shadow clear">
-                </div>
-            </div>
-
-            <div class="content-container">
-                <div class="content-header">
-                    <h1 class="left">Authority</h1>
-                    <a class="right more">More...</a>
-                </div>
-                <div class="content-body shadow clear">
-                </div>
-            </div>
-        </div>
-
-        <div class="col1 clear">
-            <div class="content-container">
-                <div class="content-header">
-                    <h1 class="left">Application</h1>
-                    <a class="right more">More...</a>
-                </div>
-                <div class="content-body shadow clear">
-                </div>
-            </div>
+            </form>
         </div>
     </div>
+{% endblock %}
+
+{% block scripts %} {{ block.super }}
+    <script type="text/javascript">
+        (function ($) {
+
+            // Fill email, password, and remember me checkbox
+            console.log($.cookie('remember_me'));
+            if($.cookie('remember_me') == 'true') {
+                $('#ckRemMe').attr('checked', true);
+                $('#inputEmail').val($.cookie('email'));
+                $('#inputPassword').val($.cookie('password'));
+            }
+
+            // Hook login submit
+            $("#formLogin").submit(function (event) {
+                if($("#ckRemMe").prop('checked')) {
+                    $.cookie('remember_me', 'true');
+                    console.log($.cookie('remember_me'));
+                    $.cookie('email', $('#inputEmail').val());
+                    $.cookie('password', $('#inputPassword').val());
+                } else {
+                    $.cookie('remember_me', 'false');
+                    console.log($.cookie('remember_me'));
+                }
+                return true;
+            });
+        })(jQuery);
+    </script>
 {% endblock %}

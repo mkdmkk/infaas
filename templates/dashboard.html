@@ -1,0 +1,20 @@
+{% extends "common.html" %}
+
+{% block stylesheets %} {{ block.super }}
+<style>
+</style>
+{% endblock %}
+
+{% block content %}
+<h3>Dashboard</h3>
+    {{ request.session.user }}
+{% endblock %}
+
+{% block scripts %} {{ block.super }}
+    <script type="text/javascript">
+        (function ($) {
+            $(".user-name").html("{{ request.session.user.name }}");
+
+        })(jQuery);
+    </script>
+{% endblock %}

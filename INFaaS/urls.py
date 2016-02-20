@@ -1,44 +1,40 @@
-from django.conf.urls import patterns, include, url
-from django.conf.urls.static import static
+"""rainbow_service URL Configuration
 
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/1.9/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
+Including another URLconf
+    1. Add an import:  from blog import urls as blog_urls
+    2. Import the include() function: from django.conf.urls import url, include
+    3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
+"""
+from django.conf.urls import url, include
 from django.contrib import admin
 
-import INFaaS
-import contextman
-import domainman
-import inference
-import solutionman
-import test
-from INFaaS import settings
+from INFaaS import views, apis
 
-admin.autodiscover()
-
-urlpatterns = patterns('',
-    # INFaaS Console (SaaS)
-    url(r'^solution/?$', solutionman.views.render, {"page": "index"}),
-    url(r'^solution/(P<page>\w+)$', solutionman.views.render),
-
-    url(r'^domain/?$', domainman.views.render, {"page":"index"}),
-    url(r'^domain/(P<page>\w+)$', domainman.views.render),
-
-    url(r'^/?$', INFaaS.views.render, {"page":"index"}),
-    url(r'^(?P<page>\w+)$', INFaaS.views.render),
-
-    # Context Visualizer (SaaS)
-    # url(r'^app/contextviz/?$', contextviz.views.render, {"page":"index"}),
-    # url(r'^app/contextviz/(?P<page>\w+)$', contextviz.views.render),
-
-    # INFaaS APIs (CaaS)
-    url(r'^api/contexts$', contextman.views.process), # TODO: Remove!
-    url(r'^api/solutions$', solutionman.views.process), # TODO: Get training data
-    url(r'^api/domains$', domainman.views.process),
-    url(r'^api/users$', domainman.views.process),
-    url(r'^api/infer$', inference.views.infer),
-    url(r'^api/hello', test.views.hello),
-
+urlpatterns = [
     # Admin Console
     url(r'^admin/', include(admin.site.urls)),
 
-    # Context Acquisition
-    # url(r'^cb/acquisition/withings', '......smart_health_toilet.withings.on_authorized'),
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # INFaaS APIs (CaaS)
+    url(r'^api/domains$', apis.handle_domains_mgt),
+    url(r'^api/solutions$', apis.handle_solutions_mgt),
+    url(r'^api/users$', apis.handle_users_mgt),
+    url(r'^api/infer$', apis.infer),
+    url(r'^api/hello', apis.hello),
+
+    # INFaaS Console (SaaS)
+    url(r'^solution/?$', views.render_page, {"page": "solution"}),
+    url(r'^domain/?$', views.render_page, {"page": "domain"}),
+    url(r'^login/?$', views.login),
+    url(r'^logout/?$', views.logout),
+    url(r'^$', views.render_page, {"page": "index"}),
+    url(r'^(?P<page>\w+)$', views.render_page),
+]
