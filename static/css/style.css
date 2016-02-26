@@ -1,3 +1,56 @@
+/*
+2C3E50
+E74C3C
+ECF0F1
+3498DB
+2980B9
+
+468966
+FFF0A5
+FFB03B
+B64926
+8E2800
+*/
+
 body {
     background-color: #2C3E50;
+}
+
+#main {
+    min-height: 702px; padding: 60px 0px; background-color: #fff;
+}
+
+#footer {
+    padding: 30px 0px; color: #ECF0F1;
+}
+
+#footer a {
+    color: #ECF0F1;
+}
+
+#footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    color: #3498DB !important;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: #2980B9 !important;
+}
+
+.infaas-table tr {
+    max-height: 100px !important;
+}
+
+.infaas-desc {
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
 }

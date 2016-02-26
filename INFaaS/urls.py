@@ -31,10 +31,13 @@ urlpatterns = [
     url(r'^api/hello', apis.hello),
 
     # INFaaS Console (SaaS)
-    url(r'^solution/?$', views.render_page, {"page": "solution"}),
-    url(r'^domain/?$', views.render_page, {"page": "domain"}),
+    url(r'^domain/?$', views.render_page, {"pagename": "domain"}),
+    url(r'^solution/?$', views.render_page, {"pagename": "solution"}),
+    url(r'^inference/?$', views.render_page, {"pagename": "inference"}),
     url(r'^login/?$', views.login),
     url(r'^logout/?$', views.logout),
-    url(r'^$', views.render_page, {"page": "index"}),
+    url(r'^domain/mgt?$', views.handle_domains_mgt),
+    url(r'^solution/mgt?$', views.handle_solutions_mgt),
+    url(r'^$', views.render_page, {"pagename": "index"}),
     url(r'^(?P<page>\w+)$', views.render_page),
 ]

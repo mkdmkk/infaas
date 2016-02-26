@@ -1,3 +1,4 @@
+from bson import ObjectId
 from pymongo import MongoClient
 
 from INFaaS import constants
@@ -10,8 +11,8 @@ class DomainManager:
     The form of a domain
         name: human readable name of a domain; it should be unique.
         desc: description of a domain
-        features: a list of features
-        situations: a list of possible situations; possible inference results
+        features: a list of features; [{'name', 'desc'}, ...]
+        situations: a list of possible situations; possible inference results; [{'name', 'desc'}, ...]
     """
 
     def __init__(self):
@@ -21,7 +22,8 @@ class DomainManager:
         verified = self._verify_domain(domain)
         if not verified or not set(domain.keys()) >= ATTRIBUTES:
             raise Exception(constants.MSG_INVALID_PARAMS)
-
+        if 'owner' in domain:
+            domain['owner'] = ObjectId(domain.get('owner'))
         res = self.db.insert_one(domain)
         if res.acknowledged:
             return True

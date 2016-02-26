@@ -6,15 +6,16 @@
 {% endblock %}
 
 {% block content %}
-<h3>Dashboard</h3>
-    {{ request.session.user }}
+    <h3>Dashboard</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <h4>My Domains and Solutions</h4>
+        </div>
+        <div class="col-md-6">
+            <h4>Recent Inference Results</h4>
+        </div>
+    </div>
 {% endblock %}
 
 {% block scripts %} {{ block.super }}
-    <script type="text/javascript">
-        (function ($) {
-            $(".user-name").html("{{ request.session.user.name }}");
-
-        })(jQuery);
-    </script>
 {% endblock %}

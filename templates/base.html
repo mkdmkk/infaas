@@ -6,14 +6,6 @@
     <meta charset="UTF-8">
     <title>INFaaS</title>
 
-    <script src="{% static "lib/jquery-1.11.1.min.js" %}"></script>
-    <script src="{% static "lib/jquery-cookie/jquery.cookie.js" %}"></script>
-    <script src="{% static "lib/bootstrap-3.3.6-dist/js/bootstrap.min.js" %}"></script>
-    <script>
-        $(function () {
-        });
-    </script>
-
     <link rel="stylesheet" href="{% static "lib/bootstrap-3.3.6-dist/css/bootstrap.min.css" %}"/>
     <link rel="stylesheet" href="{% static "css/style.css" %}"/>
 
@@ -24,15 +16,22 @@
 <div class="container-fluid">
     {% block header %}{% endblock %}
 </div>
-<div class="container-fluid" style="min-height: 600px; padding: 60px 0px; background-color: #fff;">
+<div class="container-fluid" id='main'>
     <div class="container">
         {% block content %}{% endblock %}
     </div>
 </div>
-<div class="container-fluid">
+<div class="container" id='footer'>
     {% block footer %}{% endblock %}
 </div>
 
+<script src="{% static "lib/jquery-2.2.1.min.js" %}"></script>
+<script src="{% static "lib/jquery-cookie/jquery.cookie.js" %}"></script>
+<script src="{% static "lib/bootstrap-3.3.6-dist/js/bootstrap.min.js" %}"></script>
+<script>
+    $(function () {
+    });
+</script>
 {% block scripts %}
 {% endblock %}
 </body>

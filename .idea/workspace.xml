@@ -5,103 +5,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6a6109d-1633-4775-a0c5-0df3afde0947" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/INFaaS/constants.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/INFaaS/templatetags/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/dataset_human_activity/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/user.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/bootstrap-3.3.6-dist/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/.tm_properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/MIT-LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/cookie.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/jquery.cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/test/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/test/malformed_cookie.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/test/server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie/test/tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/domain.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/login.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.cache/oauth2/cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/acquisition/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/acquisition/arduino.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/acquisition/withings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/adaptation/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/comm/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contextman/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contextman/acceleration_generator.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contextman/contextman.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contextman/contexttypes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contextman/templatetags/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contextman/templatetags/common.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contextman/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/diagrams/algs_hierarchy.graffle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/diagrams/algs_hierarchy.pptx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domainman/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/domainman/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/model/context.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nlp/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nlp/nlpengine.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/offloading/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sessionman/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/solutionman/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/solutionman/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sourceman/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sourceman/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/contextviz/css/arrangement.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/contextviz/css/layout.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/layout.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/context/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/domain/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/solution/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/source/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/user/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/userman/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/userman/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/csv_loader.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/visualization/__init__.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/solutionman/dataset_human_activity/WISDM_ar_v1.1_raw.txt" afterPath="$PROJECT_DIR$/dataset/dataset_human_activity/WISDM_ar_v1.1_raw.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/solutionman/dataset_human_activity/parser.py" afterPath="$PROJECT_DIR$/dataset/dataset_human_activity/parser.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/base_default.html" afterPath="$PROJECT_DIR$/templates/common.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/images/ui-icons_444444_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/images/ui-icons_555555_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/images/ui-icons_777620_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/images/ui-icons_777777_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/images/ui-icons_cc0000_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-bg_flat_10_000000_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-bg_glass_100_f6f6f6_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-bg_glass_100_fdf5ce_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-icons_228ef1_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-icons_ef8c08_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-icons_ffd27a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/images/ui-icons_444444_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/images/ui-icons_555555_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/images/ui-icons_777620_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/images/ui-icons_777777_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/images/ui-icons_cc0000_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/INFaaS/templatetags/mongotags.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/INFaaS/templatetags/pythonictags.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/INFaaS/templatetags/viewtags.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-2.2.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/external/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/jquery-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/jquery-ui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/jquery-ui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/jquery-ui.structure.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/jquery-ui.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/external/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/jquery-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/jquery-ui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/jquery-ui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/jquery-ui.structure.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/jquery-ui.structure.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/jquery-ui.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/jquery-ui.theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/AUTHORS.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/external/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/jquery-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/jquery-ui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/jquery-ui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/jquery-ui.structure.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/jquery-ui.structure.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/jquery-ui.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/jquery-ui.theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.12.0-beta.1/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/inference.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/solution.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/registration/login.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/INFaaS/apis.py" afterPath="$PROJECT_DIR$/INFaaS/apis.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/INFaaS/settings.py" afterPath="$PROJECT_DIR$/INFaaS/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/INFaaS/urls.py" afterPath="$PROJECT_DIR$/INFaaS/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/INFaaS/views.py" afterPath="$PROJECT_DIR$/INFaaS/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/INFaaS/wsgi.py" afterPath="$PROJECT_DIR$/INFaaS/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.py" afterPath="$PROJECT_DIR$/database.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/domain.py" afterPath="$PROJECT_DIR$/model/domain.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/solution.py" afterPath="$PROJECT_DIR$/model/solution.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/common.html" afterPath="$PROJECT_DIR$/templates/common.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/domain.html" afterPath="$PROJECT_DIR$/templates/domain.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="SituationInferenceService.iws" />
@@ -185,89 +166,59 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.5">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/templates/base.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.13921113">
-                      <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/static/css/style.css">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0">
-                      <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="1" selection-end-column="30" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/model/user.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0">
-                      <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-                      <folding>
-                        <element signature="e#0#11#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0">
-                      <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="common.html" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/templates/common.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.49187934">
-                      <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/templates/index.html">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0">
-                      <caret line="61" column="45" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="domain.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/domain.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/base.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.6229508">
+                  <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/INFaaS/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+                  <folding>
+                    <element signature="e#704#745#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/INFaaS/settings.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/INFaaS/views.py">
+          <file leaf-file-name="domain.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/domain.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4313099">
-                  <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                  </folding>
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -295,12 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/views.py" />
-        <option value="$PROJECT_DIR$/static/js/context.js" />
-        <option value="$PROJECT_DIR$/media/healthcare/dataset/bloodpressure/withings001.csv" />
-        <option value="$PROJECT_DIR$/application/healthcare/loader/bloodpressure/withins.py" />
-        <option value="$PROJECT_DIR$/application/healthcare/loader/ecg/ptbdb.py" />
-        <option value="$PROJECT_DIR$/application/healthcare/loader/bloodpressure/withings.py" />
         <option value="$PROJECT_DIR$/application/healthcare/abnormality/bloodpressure.py" />
         <option value="$PROJECT_DIR$/application/activity/app1.py" />
         <option value="$PROJECT_DIR$/comm/__init__.py" />
@@ -329,22 +274,28 @@
         <option value="$PROJECT_DIR$/sourceman/views.py" />
         <option value="$PROJECT_DIR$/INFaaS/wsgi.py" />
         <option value="$PROJECT_DIR$/INFaaS/constants.py" />
-        <option value="$PROJECT_DIR$/INFaaS/apis.py" />
         <option value="$PROJECT_DIR$/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/model/solution.py" />
-        <option value="$PROJECT_DIR$/model/domain.py" />
         <option value="$PROJECT_DIR$/model/user.py" />
-        <option value="$PROJECT_DIR$/INFaaS/settings.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/INFaaS/utils.py" />
-        <option value="$PROJECT_DIR$/templates/domain.html" />
-        <option value="$PROJECT_DIR$/INFaaS/urls.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/INFaaS/views.py" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/templates/common.html" />
+        <option value="$PROJECT_DIR$/templates/solution.html" />
+        <option value="$PROJECT_DIR$/templates/inference.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/INFaaS/templatetags/mongodbtags.py" />
+        <option value="$PROJECT_DIR$/INFaaS/settings.py" />
+        <option value="$PROJECT_DIR$/INFaaS/apis.py" />
+        <option value="$PROJECT_DIR$/INFaaS/templatetags/pythonictags.py" />
+        <option value="$PROJECT_DIR$/INFaaS/views.py" />
+        <option value="$PROJECT_DIR$/INFaaS/templatetags/mongotags.py" />
+        <option value="$PROJECT_DIR$/model/domain.py" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/INFaaS/templatetags/viewtags.py" />
+        <option value="$PROJECT_DIR$/templates/common.html" />
+        <option value="$PROJECT_DIR$/INFaaS/urls.py" />
+        <option value="$PROJECT_DIR$/templates/domain.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
@@ -355,9 +306,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="41" />
+    <option name="x" value="42" />
     <option name="y" value="23" />
-    <option name="width" value="1879" />
+    <option name="width" value="1878" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -388,6 +339,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -406,124 +359,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="healthcare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="healthcare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="renderer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INFaaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -536,7 +373,7 @@
     <property name="recentsLimit" value="5" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="LayoutCode.rearrangeEntriesDjangoTemplate" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="base.html&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/templates/base.html&#10;user&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/model/user.py&#10;url&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/INFaaS/urls.py&#10;sett&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/INFaaS/settings.py&#10;solutio&#9;null&#9;null&#10;w&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/INFaaS/wsgi.py&#10;we&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/contextviz/websocket.py&#10;mana&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/manage.py&#10;wsg&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/INFaaS/wsgi.py&#10;manag&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/manage.py&#10;con&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/static/js/context.js&#10;contextman/view&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/contextman/views.py&#10;contextman&#9;null&#9;null&#10;solution/ini&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/__init__.py&#10;solu/__&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/__init__.py&#10;solu&#9;null&#9;null&#10;solution/v&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/views.py&#10;cont/vie&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/contextman/views.py&#10;infen/view&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/infengine/views.py&#10;sol/view&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/views.py&#10;solution&#9;null&#9;null&#10;infen&#9;null&#9;null&#10;app.&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/client/app.py&#10;so/view&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/views.py&#10;solutionman/v&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/views.py" />
+    <property name="SearchEverywhereHistoryKey" value="url&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/INFaaS/urls.py&#10;base&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/templates/base.html&#10;view&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/INFaaS/views.py&#10;domain&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/model/domain.py&#10;common&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/templates/common.html&#10;style&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/static/css/style.css&#10;styl&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/static/css/style.css&#10;urls&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/INFaaS/urls.py&#10;index&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/templates/index.html&#10;tag&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/INFaaS/templatetags/mongotags.py&#10;settin&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/INFaaS/settings.py&#10;tags&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/INFaaS/templatetags/mongodbtags.py&#10;st&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/static/css/style.css&#10;v&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/INFaaS/views.py&#10;base.html&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/templates/base.html&#10;user&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/model/user.py&#10;sett&#9;FILE&#9;file:///Volumes/Development/ws-pycharm/INFaaS/INFaaS/settings.py&#10;solutio&#9;null&#9;null&#10;w&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/INFaaS/wsgi.py&#10;we&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/contextviz/websocket.py&#10;mana&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/manage.py&#10;wsg&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/INFaaS/wsgi.py&#10;manag&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/manage.py&#10;con&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/static/js/context.js&#10;contextman/view&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/INFaaS/contextman/views.py&#10;contextman&#9;null&#9;null&#10;solution/ini&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/__init__.py&#10;solu/__&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/__init__.py&#10;solu&#9;null&#9;null&#10;solution/v&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/views.py&#10;cont/vie&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/contextman/views.py&#10;infen/view&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/infengine/views.py&#10;sol/view&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/views.py&#10;solution&#9;null&#9;null&#10;infen&#9;null&#9;null&#10;app.&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/client/app.py&#10;so/view&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/views.py&#10;solutionman/v&#9;FILE&#9;file:///Users/mkk/Development/ws-pycharm/sis/solutionman/views.py" />
     <property name="LayoutCode.rearrangeEntriesPython" value="false" />
     <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
     <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
@@ -555,10 +392,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/lib" />
-      <recent name="$PROJECT_DIR$/INFaaS" />
+      <recent name="$PROJECT_DIR$/INFaaS/templatetags" />
       <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/INFaaS" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/acquisition" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/lib" />
@@ -985,14 +822,20 @@
       <option name="project" value="LOCAL" />
       <updated>1455712501626</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated">
+      <created>1455945893338</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1455945893339</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="23" width="1879" height="1057" extended-state="0" />
+    <frame x="42" y="23" width="1878" height="1057" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16766468" sideWeight="0.49736843" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17265795" sideWeight="0.49736843" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39296794" sideWeight="0.502994" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1003,19 +846,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11347517" sideWeight="0.5026316" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@INFaaS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885212" sideWeight="0.48935038" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@INFaaS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885212" sideWeight="0.48935038" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27656078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="153" y="122" width="1667" height="858" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27644494" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="153" y="122" width="1667" height="858" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27564767" sideWeight="0.5122482" order="2" side_tool="true" content_ui="tabs" x="21" y="444" width="1834" height="215" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986361" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3253886" sideWeight="0.48775178" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3247156" sideWeight="0.48775178" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27564767" sideWeight="0.4921067" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27507755" sideWeight="0.4921067" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1042,11 +885,6 @@
           <line>345</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/model/domain.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -1055,7 +893,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="41" />
+      <option name="time" value="66" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
@@ -1067,90 +905,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/healthcare/pattern/hmm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/healthcare/segmentation/example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22364217">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/healthcare/loader/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/context.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6008902">
-          <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/example/iris.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2670623">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/mpl_toolkits/mplot3d/axes3d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7894737">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/healthcare/loader/ecg/ptbdb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.044378698">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/healthcare/loader/bloodpressure/withings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.088757396">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/healthcare/loader/bloodpressure/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.044378698">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/healthcare/abnormality/bloodpressure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27214515">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inference/alg/cost.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.031948883">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inference/alg/hyp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.110946745">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inference/alg/lr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.079872206">
@@ -1224,7 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74157304">
           <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,27 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/INFaaS/apis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5072464">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22613065">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/INFaaS/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16908212">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inference/alg/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.024154589">
@@ -1305,16 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/domain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="59" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/solution.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1322,77 +1044,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/INFaaS/templatetags/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/domain.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45348838">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/lib/jquery-cookie/test/tests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52863437">
           <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/INFaaS/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13215859">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/INFaaS/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21145375">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#304#318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="45" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="1" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1417,29 +1072,214 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/model/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13921113">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.046728972">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/inference.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2020202">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24242425">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/tables.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5752608">
+          <caret line="231" column="16" selection-start-line="231" selection-start-column="16" selection-end-line="231" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SmartToiletUI_Branch1/js/signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4470939">
+          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SmartToiletUI_Branch1/html/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39412674">
+          <caret line="72" column="71" selection-start-line="72" selection-start-column="71" selection-end-line="72" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INFaaS/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INFaaS/templatetags/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13870968">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/views/decorators/csrf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3323398">
+          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46646795">
+          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INFaaS/apis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.022288261">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/solution.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20801233">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INFaaS/templatetags/pythonictags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15601783">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7688752">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/common.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49187934">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4622496">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding>
+            <element signature="e#1265#1292#0#HTML" expanded="true" />
+            <element signature="e#1407#1434#0#HTML" expanded="true" />
+            <element signature="e#1552#1579#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INFaaS/templatetags/mongotags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26745912">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/domain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4011887">
+          <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INFaaS/templatetags/viewtags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11144131">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/INFaaS/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4313099">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.13224368">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/lib/jquery-2.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5518395">
+          <caret line="1" column="1923" selection-start-line="1" selection-start-column="1923" selection-end-line="1" selection-end-column="1923" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/lib/jquery-ui-1.11.4/jquery-ui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5418118">
+          <caret line="417" column="1" selection-start-line="417" selection-start-column="1" selection-end-line="417" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INFaaS/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INFaaS/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding>
+            <element signature="e#704#745#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6229508">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/domain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

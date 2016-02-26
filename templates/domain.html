@@ -1,14 +1,361 @@
 {% extends "common.html" %}
 
-{% block stylesheets %}
+{% load mongotags %}
+{% load pythonictags %}
+{% load viewtags %}
+
+{% block stylesheets %} {{ block.super }}
     <style>
+        #tbFeatures input, #tbSituations input {
+            display: block;
+            padding: 0px 5px;
+            margin: 0;
+            border: 0;
+            width: 100%;
+            box-shadow: none;
+        }
+
+        #tbFeatures td, #tbSituations td {
+            margin: 0;
+            padding: 0;
+        }
+
+        #tbFeatures .form-group, #tbSituations .form-group {
+            padding: 0;
+        }
     </style>
 {% endblock %}
 
 {% block content %}
-    <div class="layout-root center">
-        <div class="col1">
-            <h1>Dashboard</h1>
+    <h3 style="margin-bottom: 30px;">Domain</h3>
+
+    <!-- Domain Table -->
+
+    <table id="tbDomains" class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th class="col-md-4">Description</th>
+            <th>Features</th>
+            <th>Situations</th>
+            <th>Owner</th>
+            <th width="60px"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for d in currpage_domains %}
+            <tr domain_id="{{ d|mongo_id }}">
+                <td>{{ d.name }}</td>
+                <td><span title="{{ d.desc }}">{{ d.desc|text_overflow:200 }}</span></td>
+                <td>
+                    {% for f in d.features %}
+                        <button class="btn btn-default btn-xs infaas-domain-feature" data-toggle="tooltip" data-placement="bottom" title="{{ f.desc }}">{{ f.name }}</button>
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for s in d.situations %}
+                        <button class="btn btn-default btn-xs infaas-domain-situation" data-toggle="tooltip" data-placement="bottom" title="{{ s.desc }}">{{ s.name }}</button>
+                    {% endfor %}
+                </td>
+                <td>{{ d.owner }}</td>
+                <td>
+                    <a href="" class="infaas-domain-edit" style="margin-right: 5px;" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>
+                    <a href="" class="infaas-domain-delete" title="Remove"><span class="glyphicon glyphicon-remove"></span></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    <!-- Delete Confirmation Dialog -->
+
+    <div id="deleteConfirmModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Delete the domain?</h4>
+                </div>
+                <div class="modal-body">
+                    <p>The selected domain will be deleted permanently and cannot be recovered. Are you sure?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Delete the domain</button>
+                </div>
+            </div>
         </div>
     </div>
+
+
+    <!-- Paginate -->
+
+    <div class="row">
+        <div class="col-md-10">
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    {% for i in numpages|add:1|range:1 %}
+                        {% if i == currpage %}
+                            <li class="active"><a href="/domain?currpage={{ i }}">{{ i }}</a></li>
+                        {% else %}
+                            <li><a href="/domain?currpage={{ i }}">{{ i }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-2">
+            <button type="button" id="btNewDomain" class="btn btn-primary btn-sm pull-right" data-toggle="modal"
+                    data-target="#divNewDomain"
+                    style="margin-top: 20px;">New Domain
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Modals -->
+
+    <div id="divNewDomain" class="modal fade" role="dialog" tabindex="-1" aria-labelledby="myLargeModalLabel"
+         data-backdrop="static" data-keyboard="false">
+
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <form id='formNewDomain'>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">New Domain</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label class="control-label">Name <sup>*</sup></label>
+                            <input type="text" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Description</label>
+                            <textarea name="desc" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Features</label>
+                            <button type="button" id="btAddFeature" class="btn btn-default btn-xs"
+                                    style="margin-left: 10px;"><span
+                                    class="glyphicon glyphicon-plus"></span> Add
+                            </button>
+                            <table id="tbFeatures" class="table table-condensed table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="col-md-3">Feature Name <sup>*</sup></th>
+                                    <th>Feature Description</th>
+                                    <th class="col-md-1"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="hidden">
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="aRemoveFeature" href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Situations</label>
+                            <button type="button" id="btAddSituation" class="btn btn-default btn-xs" style="margin-left: 10px;"><span
+                                    class="glyphicon glyphicon-plus"></span> Add
+                            </button>
+                            <table id="tbSituations" class="table table-condensed table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="col-md-3">Situation Name <sup>*</sup></th>
+                                    <th>Situation Description</th>
+                                    <th class="col-md-1"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="hidden">
+                                    <td>
+                                        <input type="text" class="form-control">
+                                    </td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <a class="aRemoveSituation" href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="form-control" required>
+                                    </td>
+                                    <td><input type="text" class="form-control" required>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add New Domain</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block scripts %} {{ block.super }}
+    <script type="text/javascript">
+        (function ($) {
+            var csrftoken = $.cookie('csrftoken');
+
+            function csrfSafeMethod(method) {
+                // these HTTP methods do not require CSRF protection
+                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+            }
+
+            $.ajaxSetup({
+                beforeSend: function (xhr, settings) {
+                    if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                    }
+                }
+            });
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            var $trFeature = $("#tbFeatures tbody tr:first");
+            var $trSituation = $("#tbSituations tbody tr:first");
+
+
+            /**
+             * Table Control
+             */
+
+            $('#tbDomains').on('click', '.infaas-domain-edit', function(event) {
+                event.preventDefault();
+
+            });
+
+            $('#tbDomains').on('click', '.infaas-domain-delete', function() {
+                event.preventDefault();
+                $("#deleteConfirmModal").modal('toggle');
+            });
+
+
+            /**
+             * Modal Control
+             */
+
+            $('#btNewDomain').on('click', function () {
+                $("#formNewDomain").trigger("reset");
+                $("#formNewDomain .has-error").removeClass("has-error");
+                $("#tbFeatures tbody tr:not(:first):not(:nth-child(2))").remove();
+                $("#tbSituations tbody tr:not(:first):not(:nth-child(2))").remove();
+            });
+
+            $('#btAddFeature').click(function () {
+                var $trNewFeature = $trFeature.clone();
+                $trNewFeature.removeClass("hidden")
+                $trNewFeature.attr('name', "hidden")
+                $("#tbFeatures tbody").append($trNewFeature);
+            });
+
+            $('#btAddSituation').click(function () {
+                var $trNewSituation = $trSituation.clone();
+                $("#tbSituations tbody").append($trSituation.clone().removeClass("hidden"));
+            });
+
+            $('#tbSituations, #tbFeatures').on('click', '.aRemoveFeature, .aRemoveSituation', function () {
+                $(this).parent().parent().remove();
+            });
+
+            // Hook new domain submit
+            $("#formNewDomain").submit(function (event) {
+                event.preventDefault();
+
+                var hasError = false;
+
+                var domain = {};
+                var $name = $(this).find("input[name='name']");
+                var $desc = $(this).find("textarea[name='desc']");
+                domain['name'] = $name.val();
+                domain['desc'] = $desc.val();
+
+                if (domain['name'] == "") {
+                    $name.parent('.form-group').addClass("has-error");
+                    hasError = true;
+                }
+
+                domain['features'] = [];
+                domain['situations'] = [];
+
+                var $features = $("#tbFeatures").find("tbody>tr:not(:first)");
+                var $situations = $("#tbSituations").find("tbody>tr:not(:first)");
+
+                var idx = 0;
+                $features.each(function () {
+                    var fname = $(this).find('td:first input').val();
+                    var fdesc = $(this).find('td:nth-child(2)>input').val();
+                    $(this).closest('.form-group').removeClass('has-error');
+                    if (fname == '') {
+                        $(this).closest('.form-group').addClass('has-error');
+                        hasError = true;
+                    }
+                    domain['features'].push({"name": fname, "desc": fdesc});
+                });
+
+                $situations.each(function () {
+                    var sname = $(this).find('td:first input').val();
+                    var sdesc = $(this).find('td:nth-child(2)>input').val();
+                    $(this).closest('.form-group').removeClass('has-error');
+                    if (sname == '') {
+                        $(this).closest('.form-group').addClass('has-error');
+                        hasError = true;
+                    }
+                    domain['situations'].push({"name": sname, "desc": sdesc});
+                });
+
+                domain['owner'] = "{{ request.session.user|mongo_id_from_dict }}";
+
+                console.log(domain);
+
+                // Check required inputs
+                if (hasError) {
+                    console.log('Invalid domain.');
+                    return false;
+                }
+
+                $.ajax('/domain/mgt', {
+                    type: 'POST',
+                    data: JSON.stringify(domain),
+                    success: function() {
+                        window.location = '/domain';
+                    }
+                });
+
+                return true;
+            });
+        })(jQuery);
+    </script>
 {% endblock %}
